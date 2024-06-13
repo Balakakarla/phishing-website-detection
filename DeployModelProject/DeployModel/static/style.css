@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 150px;
+    padding: 0;
+}
+
+
+
+.top-left-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+.heading {
+    /* display: inline-block; */
+    margin-left: 160px;
+    margin-top : 35px;
+    vertical-align: top;
+}
+.icon {
+    display: inline-block;
+    position: fixed;
+    vertical-align: top;
+    margin-right: 10px;
+    top: 10px; /* Adjust top position as needed */
+    left: 10px; /* Adjust left position as needed */
+    width: 150px; /* Adjust size as needed */
+    height: 100px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 150px auto;
+    padding: 20px;
+    border: 2px solid #007bff; /* Border color */
+    border-radius: 10px; /* Border radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+main {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            
+            
+            height: 100vh;
+        }
+        .top-left-container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .heading {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 120px; /* Added margin to create gap between text and background */
+            margin-top: 120px;
+            margin-left: 400px;
+            margin-right: 400px;
+
+        }
+        h3 {
+            color: #333;
+            margin-bottom: 20px; /* Added margin to create gap between headings and other content */
+        }
+        p {
+            color: #666;
+            margin-bottom: 10px; /* Added margin to create gap between paragraphs */
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-top: 20px; /* Added margin to create gap between links and other content */
+        }
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .message {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        footer {
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-left-container">
+        <img src="{% static '128_logo.png' %}" alt="Icon" class="icon">
+        <h1 class="heading">Link Checker</h1>
+    </div>
+    <div class="container">
+        <!-- <h4>The url belongs to {{ans}}</h4> -->
+        {% if ans == 1 %}
+        <div class="message">
+            <h3>This website is safe for use! 🎉 </h3>
+            <p>Feel free to browse with confidence and enjoy your online experience! .</p>
+            <p style="margin-bottom: 30px;">However, always exercise caution when sharing personal information online.</p>
+            <a href="{{url}}">Go to website</a>
+        </div>
+        {% else %}
+        <div class="message">
+            <h3>⚠️ Caution: This website may not be safe. Please proceed with care. ⚠️</h3>
+            <p>This website has been flagged as potentially dangerous or fraudulent.</p>
+            <p>It's recommended to avoid providing any personal or sensitive information.</p> 
+        </div>
+        {% endif %}
+        <a href="{% url 'home' %}">Back to Home</a>
+    </div>
+    <footer>
+        <p style="color: white;">Copyright &copy; 2024 Link Detector</p>
+    </footer>
+</body>
+</html>
